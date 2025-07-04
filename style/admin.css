@@ -1,0 +1,28 @@
+.navigate a {
+    display: inline-block;
+}
+
+.contentWrapper {
+    padding: 16px 0;
+}
+
+.contentWrapper form {
+    width: 50%;
+}
+
+.contentWrapper form div {
+    padding: 8px 0;
+}
+
+.contentWrapper form textarea {
+    height: 200px;
+}
+
+.contentWrapper input, textarea {
+    width: 100%;
+    padding: 8px;
+}
+
+.contentWrapper input[type="submit"] {
+    width: auto;
+}

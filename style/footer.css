@@ -1,0 +1,14 @@
+#footer {
+    width: 100%;
+    position:absolute;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    border-top: solid thin #000;
+    /* background-color: #fff; */
+}
+
+
+#footer p {
+    padding: 16px 24px;
+}

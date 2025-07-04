@@ -1,0 +1,54 @@
+@import url(homepage.css);
+@import url(login.css);
+@import url(admin.css);
+@import url(header.css);
+@import url(footer.css);
+
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: sans-serif;
+    line-height: 24px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #B6B09F;
+    position: relative;
+}
+
+h1, h2, h3 {
+    font-weight: 400;
+}
+
+code {
+    background-color: #333333;
+    color: #fff;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    min-height: 100vh;
+    position: relative;
+    background-color: #fff;
+    padding: 16px 24px;
+}
+
+
+.content-wrapper {
+    padding: 16px 0;
+}
+
+@media screen and (max-width : 1024px) {
+    .wrapper {
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,36 @@
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 24px;
+}
+
+#header h2 a{
+    color : #000;
+}
+
+#header nav {
+    flex: 1;
+}
+
+#header nav ul {
+    display: flex;
+    font-size: 18px;
+    justify-content: right;
+
+}
+
+#header nav ul li {
+    padding-left: 12px;
+}
+
+
+
+#header nav ul a {
+    color: #6D5D6E;
+}
+
+#header nav img {
+    width: 32px;
+    height: 32px;
+}

@@ -1,0 +1,30 @@
+.main {
+    padding: 16px 24px;
+    height: 100%;
+}
+
+.children, .main {
+    margin-bottom: 48px;
+}
+
+
+.children small {
+    display: block;
+    padding: 8px 0;
+}
+
+.about {
+    padding: 16px 24px;
+    background-color: #F2F2F2;
+}
+
+.about p {
+    margin-top: 8px;
+}
+
+.date {
+    font-size: 12px;
+}
+
+
+
