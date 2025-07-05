@@ -2,8 +2,7 @@
 require_once "actions.php";
 
 $class = new Actions();
-$result = $class->fetchBlogs();
-$type = "HOME";
+$result = $class::fetchBlogs();
 
 if(isset($_GET["blog"])) {
     $id = htmlspecialchars($_GET["blog"]);
@@ -26,5 +25,6 @@ if(isset($_GET["blog"])) {
     }
 
 } else{
+    $type = "HOME";
     include_once "layouts/homecontent.php";
 }

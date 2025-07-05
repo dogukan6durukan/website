@@ -1,27 +1,24 @@
 <?php 
-   for($i = 0; $i < count($result); $i++) {            
-            $title = $result[$i]["title"];
-            $date = $result[$i]["date"];
-            $id = $result[$i]["id"];
-        ?>
+    foreach($result as $post) {
+?>
         <div class="content-wrapper">
             <p>
-                Title : <?php echo $title; ?>
+                Title : <?= $post["title"]; ?>
             </p>
             <p class="date">
-                Published <?php echo $date; ?>
+                Published <?= $post["date"]; ?>
             </p>
             <?php
                 switch($type) {
                     case "HOME":
                         ?>
-                            <a href="index.php?blog=<?php echo $id; ?>">View</a>
+                            <a href="index.php?blog=<?= $post["id"] ?>">View</a>
                         <?php
                     break;
 
                     case "ADMIN":
                         ?>
-                            <a href="admin.php?blog=<?php echo $id ?>">View</a>
+                            <a href="admin.php?blog=<?= $post["id"] ?>">View</a>
                         <?php
                     break;
                 }

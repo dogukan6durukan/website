@@ -17,16 +17,16 @@
         <input type="password" name="password" id="password" required />
       </div>
       <div class="form-example">
-        Question : <?php echo $question; ?>
+        Question : <?= $question; ?>
         <input type="number" name="answer" required>
       </div>
-      <input type="hidden" name="value" value="<?php echo $num; ?>">
+      <input type="hidden" name="value" value="<?= $num; ?>">
       <div class="form-example">
         <input type="submit" name="submit" value="Login" />
         <a href="./">Homepage</a>
       </div>
       <!--CSRF-->
-      <input type="hidden" name="token" value="<?php echo $_SESSION['token'] ?? '' ?>">
+      <input type="hidden" name="token" value="<?= $_SESSION['token'] ?? '' ?>">
     </form>
   </div>
 </div>

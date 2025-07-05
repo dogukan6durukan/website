@@ -1,6 +1,5 @@
 <?php
 $result = $class::fetchBlogs(); 
-$type = "ADMIN";
 ?>
 
 <h1>Welcome to Admin Page</h1>
@@ -30,6 +29,7 @@ $type = "ADMIN";
     <div class="listBlogs">
         <h2>My Blogs</h2>
             <?php
+                $type = "ADMIN";
                 include_once "layouts/listBlogs.php";
             ?>
     </div>
