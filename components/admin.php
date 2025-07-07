@@ -4,7 +4,7 @@ $result = $class::fetchBlogs();
 
 <h1>Welcome to Admin Page</h1>
 <div class="navigate">
-    <a href="./">Home</a>
+    <a href="index.php">Home</a>
     <a href="admin.php?logout=true">Log out</a>
 </div>
 
@@ -16,7 +16,8 @@ $result = $class::fetchBlogs();
            $title = htmlspecialchars($_POST["title"]);
            $content = $_POST["content"];
            $date = htmlspecialchars($_POST["date"]);
-           $class::write($title, $content, $date);
+           $url = preg_replace('#[ -]+#', '-', htmlspecialchars($title));;
+           $class::write($title, $content, $date, $url);
         ?>
         <div>
             <h2>Preview</h2>

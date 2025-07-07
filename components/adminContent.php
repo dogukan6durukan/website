@@ -1,6 +1,6 @@
 <?php 
-$id = htmlspecialchars($_GET["blog"]);
-$result = $class::fetchBlog($id);
+$shortcut = htmlspecialchars($_GET["blog"]);
+$result = $class::fetchBlog($shortcut);
 
 if($result === false) {
     echo "Page not found!";
@@ -13,8 +13,9 @@ if($result === false) {
         $title = htmlspecialchars($_POST["title"]);
         $content = $_POST["content"];
         $date = htmlspecialchars($_POST["date"]);
-        
-        $result_db = $class::update($id, $title, $content, $date);
+        $url = preg_replace('#[ -]+#', '-', htmlspecialchars($title));;
+
+        $result_db = $class::update($id, $title, $content, $date, $url);
 
         if($result_db > 0) {
             echo "Success!";

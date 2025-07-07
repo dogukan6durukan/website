@@ -12,13 +12,13 @@
                 switch($type) {
                     case "HOME":
                         ?>
-                            <a href="index.php?blog=<?= $post["id"] ?>">View</a>
+                            <a href="./<?= $post["url"] ?>">View</a>
                         <?php
                     break;
 
                     case "ADMIN":
                         ?>
-                            <a href="admin.php?blog=<?= $post["id"] ?>">View</a>
+                            <a href="admin.php?blog=<?= $post["url"] ?>">View</a>
                         <?php
                     break;
                 }

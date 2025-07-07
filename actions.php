@@ -5,8 +5,8 @@ require_once "connection.php";
 Interface Template
 {
     public static function login();
-    public static function write($title, $markdown, $date);
-    public static function update($id, $title, $content, $date);
+    public static function write($title, $markdown, $date, $url);
+    public static function update($id, $title, $content, $date, $url);
     public static function delete($id);
     public static function fetchBlogs();
     public static function fetchBlog($id);
@@ -74,28 +74,30 @@ class Actions extends Conn implements Template
         return $result;
     }
 
-    public static function fetchBlog($id) {
-        $stmt = self::$dbh->prepare("SELECT * FROM blog WHERE id=:id");
-        $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    public static function fetchBlog($url) {
+        $stmt = self::$dbh->prepare("SELECT * FROM blog WHERE url=:url");
+        $stmt->bindParam(':url', $url, PDO::PARAM_STR);
         $stmt->execute();
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
         return $result;
     }
 
-    public static function write($title, $content, $date) {
-        $stmt = self::$dbh->prepare("INSERT INTO blog (title, content, date) VALUES (:title, :content, :date)");
+    public static function write($title, $content, $date, $url) {
+        $stmt = self::$dbh->prepare("INSERT INTO blog (title, content, date, url) VALUES (:title, :content, :date, :url)");
         $stmt->bindParam(':title', $title, PDO::PARAM_STR);
         $stmt->bindParam(':content', $content, PDO::PARAM_STR);
         $stmt->bindParam(':date', $date, PDO::PARAM_STR);
+        $stmt->bindParam(':url', $url, PDO::PARAM_STR);
         $stmt->execute();
     }   
     
-    public static function update($id, $title, $content, $date) {
-        $stmt = self::$dbh->prepare("UPDATE blog SET title=:title, content=:content, date=:date WHERE id=:id");
+    public static function update($id, $title, $content, $date, $url) {
+        $stmt = self::$dbh->prepare("UPDATE blog SET title=:title, content=:content, date=:date, url=:url WHERE id=:id");
         $stmt->bindParam(':id', $id, PDO::PARAM_INT);
         $stmt->bindParam(':title', $title, PDO::PARAM_STR);
         $stmt->bindParam(':content', $content, PDO::PARAM_STR);
         $stmt->bindParam(':date', $date, PDO::PARAM_STR);
+        $stmt->bindParam(':url', $url, PDO::PARAM_STR);
         $stmt->execute();
         return $stmt->rowCount();
     }

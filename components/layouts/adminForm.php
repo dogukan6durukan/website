@@ -8,10 +8,10 @@
         <?php
             if(isset($_GET["blog"])) {
         ?>
-            <a href="./">Home</a>
+            <a href="index.php">Home</a>
             <a href="./admin.php">Admin</a>
         <?php } ?>
-    <form action="<?php echo isset($_GET["blog"]) ? 'admin.php?blog='.$id : 'admin.php';?>" method="post" class="contentForm">
+    <form action="<?php echo isset($_GET["blog"]) ? 'admin.php?blog='.$shortcut : 'admin.php';?>" method="post" class="contentForm">
         <div>
             Title <input type="text" value="<?php if(isset($_GET["blog"])) { echo $result["title"]; } ?>" name="title" id="" required>
         </div>
