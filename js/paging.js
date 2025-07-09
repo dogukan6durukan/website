@@ -14,8 +14,6 @@ class Slider
         this.prev();
     }
 
-    
-
     // Grouping
     group() {
         if(this.count === "") {
@@ -55,8 +53,6 @@ class Slider
                 return this.listEl();
             }           
        });
-
-
     }
 
     prev(){
@@ -73,7 +69,6 @@ class Slider
                 return this.listEl();
             }
         });
-
     }
 
 }

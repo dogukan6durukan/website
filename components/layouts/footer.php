@@ -1,5 +1,5 @@
-<div id="footer">
+<footer id="footer">
   <p>
     Made by Dogukan.
   </p>
-</div>
+</footer>

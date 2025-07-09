@@ -3,7 +3,10 @@
     align-items: center;
     justify-content: center;
     padding: 16px 24px;
+    position: relative;
 }
+
+
 
 #header h2 a{
     color : #000;
@@ -24,13 +27,17 @@
     padding-left: 12px;
 }
 
+#header nav ul li::before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background-color: red;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 2px;
+}
 
 
 #header nav ul a {
     color: #6D5D6E;
-}
-
-#header nav img {
-    width: 32px;
-    height: 32px;
 }

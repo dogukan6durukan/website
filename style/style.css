@@ -22,6 +22,11 @@ body {
     position: relative;
 }
 
+a {
+    color: #0000FF;
+
+}
+
 h1, h2, h3 {
     font-weight: 400;
 }
@@ -41,14 +46,22 @@ code {
     padding: 16px 24px;
 }
 
-
 .content-wrapper {
     padding: 16px 0;
+}
+
+.notfound {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width : 1024px) {
     .wrapper {
         width: 100%;
     }
+
+
 }
 

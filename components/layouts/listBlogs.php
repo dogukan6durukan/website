@@ -3,7 +3,7 @@
 ?>
         <div class="content-wrapper">
             <p>
-                Title : <?= $post["title"]; ?>
+                <?= $post["title"]; ?>
             </p>
             <p class="date">
                 Published <?= $post["date"]; ?>

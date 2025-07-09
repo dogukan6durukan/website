@@ -3,6 +3,21 @@
     height: 100%;
 }
 
+.main button {
+    background: none;
+    width: 25px;
+    height: 25px;
+    border: none;
+    background-color: #F2F2F2;
+    border-radius: 50%;
+    font-weight: bold;
+}
+.main button:hover {
+    background-color: black;
+    color: #fff;
+    cursor: pointer;
+}
+
 .children, .main {
     margin-bottom: 48px;
 }

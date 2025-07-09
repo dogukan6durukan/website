@@ -1,4 +1,4 @@
-<div class="main">
+<article class="main">
     <div class="about">
         <h2>About me</h2>
         <p>
@@ -7,6 +7,8 @@
             I'm hoping I can get into my favorite university. Meanwhile, I decided to try many programming languages
             but couldn't say I'm proficient in them. Between them, I like JavaScript itself and use it on most projects.
             Dedicated to learn the computer structure, hardware, and its components, and more.           
+            You can follow me on <a href="https://github.com/dogukan6durukan">Github</a></li>
+            and contact at <a href="mailto:dogukan6durukan@gmail.com">Gmail</a></li>
         </p>
     </div>
     <div id="content">
@@ -16,8 +18,9 @@
         ?>
     </div>
     <div class="">
-        <button id="next">Next</button>
-        <button id="prev">Prev</button>
+        <button id="prev"><</button>
+        <button id="next">></button>
+        <label for="count"></label>
         <select id="count" required>
             <option value="" selected>ALL</option>
             <option value="2" >2</option>
@@ -25,4 +28,4 @@
             <option value="5">5</option>
         </select>
     </div>
-</div>
+</article>

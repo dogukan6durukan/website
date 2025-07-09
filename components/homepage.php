@@ -8,7 +8,7 @@ if(isset($_GET["blog"])) {
         $id = htmlspecialchars($_GET["blog"]);
         $result = $class::fetchBlog($id);
         if($result === false) {
-            echo "Page not found!";
+            include_once "layouts/notfound.php";
         } else {
             $title = $result["title"];
             $markdown = $result["content"];
