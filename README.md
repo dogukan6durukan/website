@@ -1,12 +1,12 @@
 # Template Engine
-This template engine does some HTML file concatenation as in `examples/`:<br/>
+This template engine does some HTML file concatenation as in `example/`:<br/>
 index.htl:
 ```
 #include layouts/header.htl
 <h1>Yo!</h1>
 #include layouts/footer.htl
 ```
-Before parsing it, let's check if we have both `layouts/header.htl` and `layouts/footer.htl` files. In the `examples/` directory, they already exist:<br>
+Before parsing it, let's check if we have both `layouts/header.htl` and `layouts/footer.htl` files. In the `example/` directory, they already exist:<br>
 layouts/header.htl:
 ```
 <header>This is headerrr!</header>
@@ -21,7 +21,7 @@ layouts/footer.htl
 <footer>Hello from footer!</footer>
 ```
 
-and parse it with Node via two lines of code, including the main file `index.js` and parse:<br>
+and parse it with Node via two lines of code, importing the main file `index.js` and parse:<br>
 parse.js
 ```js 
 import { Parser } from "../index.js";
