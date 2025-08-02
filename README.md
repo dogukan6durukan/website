@@ -46,7 +46,6 @@ Third argument : The variable values you specified in your .htl file.
 // Boilerplate : Just reading .htl file and parses.
 await cls.getSource();
 cls.parse();
-
 ```
 And in `example.html` file we have our html file converted from `index.htl` at the beginning!
 ```html
