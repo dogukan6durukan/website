@@ -1,3 +1,4 @@
 #include layouts/header.htl
-<h1>Yo!</h1>
+<h1>{{title}}</h1>
+Hello, {{user_name}} you are {{age}} years old!
 #include layouts/footer.htl

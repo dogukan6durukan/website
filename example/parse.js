@@ -1,2 +1,10 @@
 import { Parser } from "../index.js";
-new Parser("index.htl", "example");
+
+let cls = new Parser("index.htl","example", {
+    title : "Admin Page",
+    user_name : "Dogukan",
+    age : 19
+});
+
+await cls.getSource();
+cls.parse();
