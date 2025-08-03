@@ -1,4 +1,4 @@
-<div id="question">
-    Random function question:
-   f(x) = x <span id="operation"></span><span id ="num"></span>
+<div id="questionWrapper">
+    <span id="question"></span>
+    <input type="number" id="question_inp"><button id="check">Check</button>
 </div>

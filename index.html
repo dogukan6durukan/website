@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="main.css" rel="stylesheet" />
+    <script type="module" src="question.js"></script>
     <title>Homepage</title>
 </head>
 <body>
@@ -41,9 +42,9 @@ I even opened up a YouTube channel to share my progress on
             <p>I tried some of them but would like get intermediate using them.</p>
             <ul><li>C/C++</li><li>Rust</li><li>Java</li></ul>            
         </div>
-        <div id="question">
-    Random function question:
-   f(x) = x <span id="operation"></span><span id ="num"></span>
+        <div id="questionWrapper">
+    <span id="question"></span>
+    <input type="number" id="question_inp"><button id="check">Check</button>
 </div>
         <footer>Dogukan Durukan ❤️</footer>
     </div>

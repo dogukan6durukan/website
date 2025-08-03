@@ -29,12 +29,22 @@ footer {
     padding: 0 12px;
 }
 
-#question {
-    margin-top: 24px;
+#questionWrapper {
+    margin: 24px 0;
+}
+
+#questionWrapper input {
+    display: block;
+    padding: 2px;
+}
+
+#questionWrapper #check {
+    margin-top: 4px;
+    padding: 0 4px;
 }
 
 @media (max-width : 768px) {
     body {
-        padding: 0;
+        padding: 8px;
     }    
 }
