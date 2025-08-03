@@ -9,6 +9,16 @@
             <h2>Latest Books</h2>
             @dump books {title author}
         </div>
+        <div class="tech-stack">
+            <h2>Languages</h2>
+            <p>Languages I used or still using in my projects.</p>
+            @dump tech_stack {}
+        </div>
+        <div class="liked-languages">
+            <h2>Languages I would like to learn</h2>
+            <p>I tried some of them but would like get intermediate using them.</p>
+            @dump langs {}            
+        </div>
         #include layouts/footer.htl
     </div>
 #include layouts/end.htl
