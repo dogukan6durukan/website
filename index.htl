@@ -19,6 +19,7 @@
             <p>I tried some of them but would like get intermediate using them.</p>
             @dump langs {}            
         </div>
+        #include layouts/question.htl
         #include layouts/footer.htl
     </div>
 #include layouts/end.htl

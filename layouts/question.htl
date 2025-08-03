@@ -1,0 +1,4 @@
+<div id="question">
+    Random function question:
+   f(x) = x <span id="operation"></span><span id ="num"></span>
+</div>

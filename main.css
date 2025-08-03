@@ -9,6 +9,9 @@ body {
     background-color:  #DCD7C9;
     padding: 24px;
 }
+ul {
+    padding: 0 16px;
+}
 
 .container {
     padding: 24px 32px;
@@ -24,6 +27,10 @@ body {
 footer {
     text-align: center;
     padding: 0 12px;
+}
+
+#question {
+    margin-top: 24px;
 }
 
 @media (max-width : 768px) {
