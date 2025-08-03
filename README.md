@@ -22,7 +22,7 @@ layouts/header.htl:
 </ul>
 ```
 layouts/footer.htl
-```
+```html
 <footer>Hello from footer!</footer>
 ```
 
