@@ -1,4 +1,5 @@
 #include layouts/header.htl
 <h1>{{title}}</h1>
 Hello, {{user_name}} you are {{age}} years old!
+@dump books {title author}
 #include layouts/footer.htl
