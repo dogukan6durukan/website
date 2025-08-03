@@ -1,8 +1,42 @@
 import { promises as fs } from 'fs';
 import { RULES } from './rules.js';
 
-class Variable {
-    var(token) {
+class Dump {
+  dump(token) {
+    let txt = "";
+    let match = token.match(RULES.dump);
+    let arr = this.variables[match[1].trim()];
+
+    if(arr && Array.isArray(arr)) {
+      if(match[2] && match[2] !== "") {
+        let els = match[2].split(" ");
+        for(let el of arr) {
+          for(let data of els) {
+            if(el[data]) {
+               txt += "<li>"+el[data]+"</li>";
+            }
+            else {
+              console.error("Undefined identifier:", data);
+              return;
+            }
+          }
+        }
+        let result = "<ul>"+txt+"</ul>";
+        this.source = this.source.replace(match[0], result);
+        
+      } else {
+        for(let el of arr) {
+          txt += "<li>"+el+"</li>";
+        }
+        let result = "<ul>"+txt+"</ul>";
+        this.source = this.source.replace(match[0], result);
+      } 
+    }
+  }
+}
+
+const Variable = (Sup) => class extends Sup {
+var(token) {
         let array;
         const regex = new RegExp(RULES.variable, "g");
 
@@ -46,7 +80,7 @@ const Include = (Sup) => class extends Sup {
     
               Promise.all(file_paths.map(filepath => this.read(filepath)))
                 .then(values => {
-                  this.replace(values[0]);
+                  this.replace(values[0])
                 })
                 .catch(error => {
                   console.error("Error reading files:", error);
@@ -55,9 +89,11 @@ const Include = (Sup) => class extends Sup {
           } 
         } 
       }
-      replace(datas) {
-        this.source = this.source.replace(datas.include, datas.data);
-    }
+
+      replace(data) {
+        // if(RULES.file_extension.test(data.data)) {}
+        this.source = this.source.replace(data.include, data.data);
+      }
 };
 
 export async function generateHTML(src, title) {
@@ -65,8 +101,8 @@ export async function generateHTML(src, title) {
   try {
     await fs.writeFile(title+".html", src);
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 }
 
-export class Util extends Include(Variable) {}
+export class Util extends Include(Variable(Dump)) {}

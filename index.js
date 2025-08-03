@@ -32,12 +32,16 @@ export class Parser extends Util {
         } 
         else if(RULES.variable.test(token)) {
           this.var(token);
-        } 
+        }
+        else if(RULES.dump.test(token)) {
+          this.dump(token);
+        }
       }
+
 
       setTimeout(() => {
         generateHTML(this.source, this.title);
       }, 100)
-    } 
 
+    } 
 }
