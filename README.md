@@ -2,7 +2,7 @@
 This template engine does some HTML file concatenation, allows dynamic values and dump the list of values as in `example/`:
 
 index.htl:
-```
+```html
 #include layouts/header.htl
 <h1>{{title}}</h1>
 Hello, {{user_name}} you are {{age}} years old!
@@ -13,7 +13,7 @@ Hello, {{user_name}} you are {{age}} years old!
 Before parsing it, let's check if we have both `layouts/header.htl` and `layouts/footer.htl` files. In the `example/` directory, they already exist:
 
 layouts/header.htl:
-```
+```html
 <header>This is headerrr!</header>
 <ul>
     <li>Foo</li>
@@ -30,9 +30,6 @@ And parse it with Node, and can use the boilerplate down there, importing the ma
 parse.js
 ```js 
 // Importing parser
-import { Parser } from "../index.js";
-
-// We set our Parser
 import { Parser } from "../index.js";
 
 let cls = new Parser("index.htl","example", {
@@ -54,9 +51,6 @@ let cls = new Parser("index.htl","example", {
         },
     ]
 });
-
-await cls.getSource();
-cls.parse();
 /*
 First argument : The .htl file to parsed
 Second argument : The HTML file name you generate and don't need to specify .html extension
