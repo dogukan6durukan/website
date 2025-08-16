@@ -38,7 +38,7 @@ function parse(num1, op, num2) {
 let result = parse(randxval, randOp, randnum1);
 
 button.addEventListener("click", (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     if(question_inp.value == result) {
         document.body.style.backgroundColor = "#DCD7C9";
         question.innerText = "Congrats!";
