@@ -1,7 +1,7 @@
 import { promises as fs } from 'fs';
 import { RULES } from './rules.js';
 import { Util } from './util.js';
-import { generateHTML } from './util.js';
+import { generateHTML } from './export.js';
 
 export class Parser extends Util {
 
