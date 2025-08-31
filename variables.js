@@ -1,7 +1,7 @@
 export const VARIABLES = {
     about_title : "Hello, I'm Dogukan.",
     tech_stack : ["Javascript", "Typescript", "PHP"],
-    langs : ["C", "C#"],
+    langs : ["C", "C++"],
     books : [
         {
             title : "Before Adam",
