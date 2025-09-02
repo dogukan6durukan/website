@@ -8,7 +8,7 @@ let mybtn = dom.select(".theme-btn");
 let content = dom.select(".container");
 let body = dom.select("body");
 
-mybtn.text("Light Mode");
+mybtn.text("Dark Mode");
 
 mybtn.on("click", (el) => {
 
