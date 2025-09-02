@@ -1,4 +1,4 @@
-import { Dom } from "./helpers/main.js";
+import { Dom } from "./utils/main.js";
 
 let dom = new Dom();
 
