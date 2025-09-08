@@ -36,6 +36,9 @@ export class Parser extends Util {
         else if(RULES.dump.test(token)) {
           this.dump(token);
         }
+        else if(RULES.ternary.test(token)) {
+          this.ternary(token);
+        }
       }
 
 

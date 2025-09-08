@@ -1,7 +1,78 @@
 import { promises as fs } from 'fs';
 import { RULES } from './rules.js';
 
-class Dump {
+class Ternary {
+
+  ternary(token) {
+    let match = token.match(RULES.ternary);
+  
+    const operators = {
+      equal : "==",
+      notequal : "!=",
+      bigger : ">",
+      smaller : "<"
+    }
+    
+    let condition = match[1];
+    // If true
+    let conditionMet = match[2];
+    // Not true
+    let conditionNotMet = match[3];
+
+    let conditionParsing = condition.match(RULES.ternaryCondition);
+    let conditionParsing2 = condition.match(RULES.ternaryCondition2);
+
+    let conditionResult;
+    let output;
+
+    if(conditionParsing) {
+      
+      let operand1 = conditionParsing[1];
+      let operand2 = conditionParsing[3];
+
+      // Check if operands values are defined in variables
+      if(this.variables[operand1] && this.variables[operand2]) {
+        // Check the operator
+        switch(conditionParsing[2]) {
+          case operators.equal:
+            conditionResult = operand1 == operand2;
+          break;
+
+          case operators.notequal:
+            conditionResult = operand1 != operand2;
+          break;
+
+          case operators.bigger:
+            conditionResult = operand1 > operand2;
+          break;
+
+          case operators.smaller:
+            conditionResult = operand1 < operand2;
+          break;
+        }
+
+      }
+
+      if(conditionResult) {
+        output = conditionMet;
+      } else {
+        output = conditionNotMet;
+      }
+
+      this.source = this.source.replace(match[0], output);
+      console.log(this.source);
+
+    }
+
+    // } else if(conditionParsing2) {
+
+    // }
+
+
+  }
+}
+
+const Dump = (Sup) => class extends Sup {
   dump(token) {
     let txt = "";
     let match = token.match(RULES.dump);
@@ -96,4 +167,4 @@ const Include = (Sup) => class extends Sup {
       }
 };
 
-export class Util extends Include(Variable(Dump)) {}
+export class Util extends Include(Variable(Dump(Ternary))) {}
