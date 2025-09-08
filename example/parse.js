@@ -4,6 +4,10 @@ let cls = new Parser("index.htl","example", {
     title : "Admin Page",
     user_name : "Dogukan",
     age : 19,
+    tane : "tane",
+    num1 : 1,
+    num2 : 2,
+    nane : "name",
     books : [
         {
             title : "foo1",
