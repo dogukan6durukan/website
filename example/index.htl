@@ -2,8 +2,10 @@
 <h1>{{title}}</h1>
 Hello, {{user_name}} you are {{age}} years old!
 @dump books {title author}
-tane == nane ? <div><h1>if</h1></div> : <div><h1>else</h1></div>
+tane == nane ? @dump books {title} : <div><h1>else</h1></div>
 #include layouts/footer.htl
 num ? yazdir : yazdirma
+
+isNum ? <h1>Number</h1> : <h1>Not Number</h1>
 
 num1 < num2 ? küçük : büyük

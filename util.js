@@ -3,6 +3,8 @@ import { RULES } from './rules.js';
 
 class Ternary {
 
+  // ! Ternary just works in case of raw text, the features of 
+  // ! template engine not work like dumping or variables
   ternary(token) {
     let match = token.match(RULES.ternary);
   
@@ -51,6 +53,10 @@ class Ternary {
           break;
         }
 
+      } else {
+        // Write out the undefined variable!
+        console.error("Undefined variable");
+        process.exit(1);
       }
 
       if(conditionResult) {
@@ -60,16 +66,19 @@ class Ternary {
       }
 
       this.source = this.source.replace(match[0], output);
-      console.log(this.source);
+    
+    } else if(conditionParsing2) {
+      // If operand value is defined
+      if(this.variables[conditionParsing2[0]]) {
+        output = conditionMet;
+      } else {
+        output = conditionNotMet;
+      }
 
-    }
-
-    // } else if(conditionParsing2) {
-
-    // }
-
-
-  }
+      this.source = this.source.replace(match[0], output);
+    
+    } 
+  } 
 }
 
 const Dump = (Sup) => class extends Sup {

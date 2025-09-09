@@ -42,6 +42,9 @@ export class Parser extends Util {
       }
 
 
+      // if there is only not main file to parse, wait until all files resolved
+      // then generate HTML with the latest result
+
       setTimeout(() => {
         generateHTML(this.source, this.title);
       }, 100)

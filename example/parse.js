@@ -8,6 +8,8 @@ let cls = new Parser("index.htl","example", {
     num1 : 1,
     num2 : 2,
     nane : "name",
+    num : "kaka",
+    isNum : true,
     books : [
         {
             title : "foo1",
