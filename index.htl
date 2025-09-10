@@ -3,6 +3,7 @@
             <h1>{{about_title}}</h1>
             #include layouts/header.htl
         </div>
+        #include layouts/about.htl
         <div>
             My template engine's documentation: <a href="template.html">Doc</a>
         </div>
