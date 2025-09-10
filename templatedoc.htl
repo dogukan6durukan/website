@@ -1,0 +1,9 @@
+#include layouts/head.htl
+
+    <h1>{{page_title}}</h1>
+    #include layouts/header.htl
+    
+    You can follow the latest updates here on Github : <a href="https://github.com/dogukan6durukan/template-engine">Link</a>
+    The latest documentation and examples will be included here ASAP...    
+
+#include layouts/end.htl

@@ -1,10 +1,10 @@
 #include layouts/head.htl
-    <div class="container light">
         <div class="about">
             <h1>{{about_title}}</h1>
-            <button class="theme-btn">Dark - Light Mode</button>
-            #include layouts/links.htl
-            #include layouts/about.htl
+            #include layouts/header.htl
+        </div>
+        <div>
+            My template engine's documentation: <a href="template.html">Doc</a>
         </div>
         <div class="books">
             <h2>Latest Books</h2>
@@ -21,5 +21,4 @@
             @dump langs {}            
         </div>
         #include layouts/footer.htl
-    </div>
 #include layouts/end.htl

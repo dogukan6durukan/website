@@ -1,4 +1,4 @@
-import { Dom } from "./utils/main.js";
+import { Dom } from "./jpurify/main.js";
 
 let dom = new Dom();
 

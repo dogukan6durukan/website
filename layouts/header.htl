@@ -1,4 +1,8 @@
 <div>
+    <button class="theme-btn">Dark - Light Mode</button>
+    <div>
+    <a href="/">Home</a>
     <a href="https://github.com/dogukan6durukan">Github</a>
     <a href="mailto:dogukan6durukan@gmail.com">Gmail</a>
+</div>
 </div>
